@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head lang="ko">
+    <meta charset="utf-8" />
+    <title>&#960;값 구하는 과정</title>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"/>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+    <!-- 자동 렌더링 기능을 사용하려면 auto-render 플러그인도 포함 -->
+    <script
+        defer
+        src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="title">
+        <h1>&#960;값을 구하는 과정</h1>
+        <h2>수학 과제 탐구</h2>
+        <div class="author"> <h3>박건</h3> </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Introduction</h2>
+            작년애 배운 호도법과 관련하여 &#960;에 관해 궁금증이 생김. <br>
+            그로 인해 &#960;값을 실제로 구해보기로 함.
+        </section>
+
+        <section class="way">
+            <h2>Way1</h2>
+            <h3>첫번째 방법 : 기하학적인 개념 및 무한의 개념을 이용한 계산 </h3> <br>
+            <img src="../assets/img1.jpeg" id="img1" />
+            다음과 같이 반지름이 1인 원에 내접하는 n각형이 있다고 가정하겠습니다. <br>
+            <div class="formula">
+                $$
+                \begin{align*}
+                & \sin{\frac {\pi} {n}} = \overline{AH} \\
+                & \overline{AB} = 2 \sin{\frac {\pi} {n}} \\
+                \end{align*}
+                $$
+                <div>
+                    따라서 $$n$$각형의 둘레의 길이를 $$f(n)$$이라고 할때  <br>
+                    $$f(n) = 2n\sin{\frac {\pi} {n}}$$입니다. <br>
+                    $$\lim_{n \to \infty}f(n) = 2\pi$$
+                </div>
+            </div>
+        </section>
+
+        <section class="way">
+            <h2>Way2</h2>
+            <h3>두번째 방법 : 미분과 적분 및 무한대의 개념을 이용한 계산 </h3> <br>
+            <div class="formula">
+                $$ 
+                \begin{align*} 
+                & f(x)= \sin(x){0 \leq x \leq \frac {\pi} {2}} \ ,
+                \quad g(x) = f^{-1}(x) \\ 
+                & f(0) = 0 \, \ f(\frac {\pi} {2}) = 1 \\ 
+                & g(0) = 0 \ , \ g(1) = \frac {\pi} {2} \\ \\ 
+                & y = f(x) \\ & f(g(x)) = x \\ 
+                & f^{\prime}(g(x))g^{\prime}(x) = 1 \\ 
+                \end{align*} 
+                $$
+            </div>
+
+            <div class="formula">
+                $$ 
+                \begin{align*} 
+                & y = \sin{x} \\ & x = \sin{y} 
+                \\ & g^{\prime}(x) = \frac {1} {f^{\prime}(g(x))} \\ 
+                & = \frac {1} {\cos{y}} \\ 
+                & = \frac {1}
+                {\sqrt{1-\sin^{2}(x)}} \\ 
+                & = \frac {1} {\sqrt {1-x^2}} \\ 
+                & \int_{0}^{1} g^{\prime}(x) dx = \frac {\pi} {2} \\ 
+                & \pi = 2\int_{0}^{1}
+                g^{\prime}(x) dx \\ 
+                \end{align*} 
+                $$
+            </div>
+
+            <div class="formula">
+                $$ 
+                \begin{align*} 
+                & \int_{a}^{b} f(x) dx = 
+                \lim_{n \to \infty} \sum_{k =1}^{n} 
+                {f(a + k \cdot \frac {b-a} {n}) \cdot \frac {b-a} {n}} \\ 
+                \end{align*} 
+                $$
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
