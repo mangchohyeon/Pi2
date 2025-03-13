@@ -25,14 +25,14 @@
     <main>
         <section class="intro">
             <h2>Introduction</h2>
-            작년애 배운 호도법과 관련하여 &#960;에 관해 궁금증이 생김. <br>
+            작년에 배운 호도법과 관련하여 &#960;에 관해 궁금증이 생김. <br>
             그로 인해 &#960;값을 실제로 구해보기로 함.
         </section>
 
         <section class="way">
             <h1>Way1</h1>
             <h2>첫번째 방법 : 기하학적인 개념 및 무한의 개념을 이용한 계산 </h2> <br>
-            <img src="../assets/img1.jpeg" id="img1" />
+            <img src="../assets/img1.jpeg" class="img" />
             다음과 같이 반지름이 1인 원에 내접하는 n각형이 있다고 가정하겠습니다. <br>
             <div class="formula">
                 $$
@@ -53,17 +53,16 @@
                     $$
                 </div>
             </div>
-            <p class="explain1">
+            <section class="explain1">
                 <h2>진행하면서 생긴 문제점</h2>
-                <p class="explain2">
+                <section class="explain2">
                     <h4>&#960;값을 구하는데 &#960;값이 사용된다는 것</h4>
                     &#960;의 값을 알아내고 그 값을 통해 호도법과 라디안, 삼각 함수등을 정의할 수 있게됨.<br>
                     그러나 위 방식으로는 &#960;값을 알아내기 위해 삼각함수를 사용하므로, <br>
                     &#960;값을 미리 알고 있어야한다는 전제 조건이 생기게 됨. <br>
                     따라서 이 방법은 잘못된 것이라고 판단하였다.
-                </p>
-                
-            </p>
+                </section>
+            </section>
         </section>
 
         <section class="way">
@@ -72,11 +71,11 @@
             <div class="formula">
                 $$ 
                 \begin{align*} 
-                & f(x)= \sin(x){0 \leq x \leq \frac {\pi} {2}} \ ,
+                & f(x)= \sin(x){(0 \leq x \leq \frac {\pi} {2})} \ ,
                 \quad g(x) = f^{-1}(x) \\ 
-                & f(0) = 0 \, \ f(\frac {\pi} {2}) = 1 \\ 
-                & g(0) = 0 \ , \ g(1) = \frac {\pi} {2} \\ \\ 
-                & y = f(x) \\ & f(g(x)) = x \\ 
+                & f(0) = 0 \, , \quad f(\frac {\pi} {2}) = 1 \\ 
+                & g(0) = 0 \, , \quad g(1) = \frac {\pi} {2} \\ \\ 
+                & f(g(x)) = x \\ 
                 & f^{\prime}(g(x))g^{\prime}(x) = 1 \\ 
                 \end{align*} 
                 $$
@@ -85,11 +84,16 @@
             <div class="formula">
                 $$ 
                 \begin{align*} 
-                & y = \sin{x} \\ & x = \sin{y} 
-                \\ & g^{\prime}(x) = \frac {1} {f^{\prime}(g(x))} \\ 
+                & y = f(x) = \sin{x} \\ & x = \sin{y}
+                \end{align*} 
+                $$
+
+                $$ 
+                \begin{align*} 
+                \\ g^{\prime}(x) & = \frac {1} {f^{\prime}(g(x))} \\ 
                 & = \frac {1} {\cos{y}} \\ 
                 & = \frac {1}
-                {\sqrt{1-\sin^{2}(x)}} \\ 
+                {\sqrt{1-\sin^{2}y}} \\ 
                 & = \frac {1} {\sqrt {1-x^2}} \\ 
                 & \int_{0}^{1} g^{\prime}(x) dx = \frac {\pi} {2} \\ 
                 & \pi = 2\int_{0}^{1}
@@ -97,6 +101,20 @@
                 \end{align*} 
                 $$
             </div>
+
+            <section class="explain1" id="explain2">
+                이 때 단순히 적분을 하게 된다면 &#960;값을 구할 수 없음. <br>
+                따라서 급수를 이용하여 정적분을 정의하고, 값을 구하는 방법을 사용함.
+            </section>
+            <img id="img2" src="../assets/img2.jpg">
+            <section class="explain1">
+                1. 적분 구간을 n등분한다. <br>
+                2. n개의 직사각형의 넓이를 모두 합한다. <br>
+                3. n을 무한대로 보낸다.<br>
+                (n이 무한대로 발산할 때, n개의 직사각형의 가로 길이는 매우 작아지게 된다. <br>
+                결국 n개의 직사각형의 넓이와, 실제 넓이의 오차값이 0으로 수렴하게 된다.) <br> <br>
+                따라서 정적분을 급수의 합으로 나타낼 수 있다.
+            </section>
 
             <div class="formula">
                 $$ 
@@ -107,6 +125,11 @@
                 \end{align*} 
                 $$
             </div>
+        </section>
+
+        <section class="way">
+            <h1>Way3</h1> <br> <br>
+            
         </section>
     </main>
 
