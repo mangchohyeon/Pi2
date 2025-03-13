@@ -6,6 +6,5 @@ document.addEventListener("DOMContentLoaded", function() {
         {left: "\\(", right: "\\)", display: false}
       ]
     });
-  alert("Perfect!\n");  
 });
   

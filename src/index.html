@@ -19,7 +19,7 @@
     <header class="title">
         <h1>&#960;값을 구하는 과정</h1>
         <h2>수학 과제 탐구</h2>
-        <div class="author"> <h3>박건</h3> </div>
+        <div class="author"> <h2>박건</h2> </div>
     </header>
 
     <main>
@@ -30,8 +30,8 @@
         </section>
 
         <section class="way">
-            <h2>Way1</h2>
-            <h3>첫번째 방법 : 기하학적인 개념 및 무한의 개념을 이용한 계산 </h3> <br>
+            <h1>Way1</h1>
+            <h2>첫번째 방법 : 기하학적인 개념 및 무한의 개념을 이용한 계산 </h2> <br>
             <img src="../assets/img1.jpeg" id="img1" />
             다음과 같이 반지름이 1인 원에 내접하는 n각형이 있다고 가정하겠습니다. <br>
             <div class="formula">
@@ -43,15 +43,32 @@
                 $$
                 <div>
                     따라서 $$n$$각형의 둘레의 길이를 $$f(n)$$이라고 할때  <br>
-                    $$f(n) = 2n\sin{\frac {\pi} {n}}$$입니다. <br>
-                    $$\lim_{n \to \infty}f(n) = 2\pi$$
+                    $$ f(n) = 2n\sin{\frac{\pi} {n}}$$ 이고 <br>
+                    $$
+                    \begin{align*}
+                    &\lim_{n \to \infty} f(n) \\
+                    & = \lim_{n \to \infty} 2n\sin{\frac{\pi} {n}} \\
+                    & = 2 \pi입니다.
+                    \end{align*}
+                    $$
                 </div>
             </div>
+            <p class="explain1">
+                <h2>진행하면서 생긴 문제점</h2>
+                <p class="explain2">
+                    <h4>&#960;값을 구하는데 &#960;값이 사용된다는 것</h4>
+                    &#960;의 값을 알아내고 그 값을 통해 호도법과 라디안, 삼각 함수등을 정의할 수 있게됨.<br>
+                    그러나 위 방식으로는 &#960;값을 알아내기 위해 삼각함수를 사용하므로, <br>
+                    &#960;값을 미리 알고 있어야한다는 전제 조건이 생기게 됨. <br>
+                    따라서 이 방법은 잘못된 것이라고 판단하였다.
+                </p>
+                
+            </p>
         </section>
 
         <section class="way">
-            <h2>Way2</h2>
-            <h3>두번째 방법 : 미분과 적분 및 무한대의 개념을 이용한 계산 </h3> <br>
+            <h1>Way2</h1>
+            <h2>두번째 방법 : 미분과 적분 및 무한대의 개념을 이용한 계산 </h2> <br>
             <div class="formula">
                 $$ 
                 \begin{align*} 

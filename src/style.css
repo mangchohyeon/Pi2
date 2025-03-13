@@ -71,6 +71,24 @@ main
   border : 2px solid black;
 }
 
+.explain1
+{
+    width : 95%;
+    height : auto;
+}
+
+.explain1 h2
+{
+    width : 95%;
+    height : auto;
+}
+
+.explain2
+{
+    font-size: 1.5em !important;
+    width : 100%;
+    height : auto;
+}
 
 .formula
 {
