@@ -9,6 +9,20 @@ body
   font-size: 1.0em;
 }
 
+/* 기본적으로 인라인 수식은 inline-block 유지 */
+.katex {
+  display: inline-block;
+  vertical-align: -0.3em;
+}
+
+/* 디스플레이 모드 수식에는 katex-display 클래스를 사용 */
+.katex.katex-display {
+  display: block;
+  margin: 1em 0;  /* 필요에 따라 여백 추가 */
+}
+
+
+
 
 header
 {
@@ -17,7 +31,16 @@ header
   text-align: center;
 }
 
-header h1, header h2
+header h1
+{
+  width : 100%;
+  height : auto;
+  display: block;
+  padding-left: 40%;
+  padding-right : 40%;
+}
+
+header h2, header h1
 {
   width : auto;
   height : auto;
@@ -29,6 +52,7 @@ header h1, header h2
   width : 100%;
   height : auto;
   margin-top : 3%;
+  margin-left : 5%;
   display : flex;
   flex-direction: row;
   align-items: flex-start;
@@ -56,6 +80,7 @@ main
   margin-bottom: 20%;
   height : auto;
   width : auto;
+  margin-left : 3%;
 }
 
 .way
@@ -66,6 +91,19 @@ main
   justify-content: center;
   height : auto;
   width : 100%;
+  padding-left : 3%;
+}
+
+.way_title
+{
+  margin-left : 2%;
+}
+
+.formula_with_text
+{
+  width : 100%;
+  height : auto;
+  display : inline-block;
 }
 
 .img
@@ -74,36 +112,36 @@ main
   border : 2px solid black;
 }
 
+.img-wrapper {
+  position: relative; /* 부모 요소를 기준으로 위치를 설정하기 위해 relative로 설정 */
+  display: inline-block; /* img 요소와 sup 요소를 함께 감싸기 위해 inline-block으로 설정 */
+}
+
 #img2
 {
   width : 40%;
 }
 
-.explain1
+.link_in_wrapper 
 {
-  width : 95%;
-  height : auto;
-  font-size: 1.4em;
+  position: absolute; /* 절대 위치를 사용하여 img 요소의 오른쪽 위에 배치 */
+  top: 0;
+  right: 0;
 }
 
-.explain1 h2
+.link_in
 {
-  width : 95%;
-  height : auto;
+  color:aqua;
+  text-decoration-line:none;
 }
 
-.explain2
+.normal_text
 {
-  font-size: 1.4em;
-  width : 100%;
+  width : auto;
   height : auto;
+  font-size : 1.5em;
 }
 
-#explain2
-{
-  margin-top : 10%;
-  margin-bottom : 10%;
-}
 
 .formula
 {
@@ -157,3 +195,15 @@ footer
   font-size: 1em !important;
 }
 
+
+.link_out
+{
+  text-decoration-line: none;
+  color : lawngreen;
+
+}
+
+.link_out:hover
+{
+  text-decoration:underline;
+}

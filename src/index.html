@@ -2,6 +2,7 @@
 <html>
 <head lang="ko">
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
     <title>&#960;값 구하는 과정</title>
     <link
         rel="stylesheet"
@@ -17,7 +18,7 @@
 
 <body>
     <header class="title">
-        <h1>&#960;값을 구하는 과정</h1>
+        <h1>\(\pi\)값을 구하는 과정</h1>
         <h2>수학 과제 탐구</h2>
         <div class="author"> <h2>박건</h2> </div>
     </header>
@@ -25,15 +26,18 @@
     <main>
         <section class="intro">
             <h2>Introduction</h2>
-            작년에 배운 호도법과 관련하여 &#960;에 관해 궁금증이 생김. <br>
-            그로 인해 &#960;값을 실제로 구해보기로 함.
+            작년에 배운 호도법과 관련하여 \(\pi\)에 관해 궁금증이 생김. <br>
+            그로 인해 \(\pi\)값을 실제로 구해보기로 함.
         </section>
 
         <section class="way">
-            <h1>Way1</h1>
+            <h1 class="way_title">Way1</h1>
             <h2>첫번째 방법 : 기하학적인 개념 및 무한의 개념을 이용한 계산 </h2> <br>
             <img src="../assets/img1.jpeg" class="img" />
-            다음과 같이 반지름이 1인 원에 내접하는 n각형이 있다고 가정하겠습니다. <br>
+            <div class="normal_text">
+                다음과 같이 반지름이 1인 원에 내접하는 n각형이 있다고 가정하겠습니다.
+            </div> 
+            <br>
             <div class="formula">
                 $$
                 \begin{align*}
@@ -41,25 +45,31 @@
                 & \overline{AB} = 2 \sin{\frac {\pi} {n}} \\
                 \end{align*}
                 $$
-                <div>
-                    따라서 $$n$$각형의 둘레의 길이를 $$f(n)$$이라고 할때  <br>
+                <div class="formula_with_text">
+                    따라서&nbsp;\(n\)&nbsp;각형의 둘레의 길이를&nbsp;\(f(n)\)&nbsp;이라고 할때
                     $$ f(n) = 2n\sin{\frac{\pi} {n}}$$ 이고 <br>
                     $$
                     \begin{align*}
                     &\lim_{n \to \infty} f(n) \\
                     & = \lim_{n \to \infty} 2n\sin{\frac{\pi} {n}} \\
-                    & = 2 \pi입니다.
+                    & = 2 \pi
                     \end{align*}
                     $$
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    입니다.
                 </div>
             </div>
-            <section class="explain1">
+            <section>
                 <h2>진행하면서 생긴 문제점</h2>
-                <section class="explain2">
-                    <h4>&#960;값을 구하는데 &#960;값이 사용된다는 것</h4>
-                    &#960;의 값을 알아내고 그 값을 통해 호도법과 라디안, 삼각 함수등을 정의할 수 있게됨.<br>
-                    그러나 위 방식으로는 &#960;값을 알아내기 위해 삼각함수를 사용하므로, <br>
-                    &#960;값을 미리 알고 있어야한다는 전제 조건이 생기게 됨. <br>
+                <section class="normal_text">
+                    <h3>\(\pi\)값을 구하는데 \(\pi\)값이 사용된다는 것</h3>
+                    \(\pi\)의 값을 알아내고 그 값을 통해 호도법과 라디안, 삼각 함수등을 정의할 수 있게됨.<br>
+                    그러나 위 방식으로는 \(\pi\)값을 알아내기 위해 삼각함수를 사용하므로, <br>
+                    \(\pi\)값을 미리 알고 있어야한다는 전제 조건이 생기게 됨. <br>
                     따라서 이 방법은 잘못된 것이라고 판단하였다.
                 </section>
             </section>
@@ -102,12 +112,15 @@
                 $$
             </div>
 
-            <section class="explain1" id="explain2">
-                이 때 단순히 적분을 하게 된다면 &#960;값을 구할 수 없음. <br>
+            <section class="normal_text" style="margin-top: 5%; margin-bottom: 5%;">
+                이 때 단순히 적분을 하게 된다면 \(\pi\)값을 구할 수 없음. <br>
                 따라서 급수를 이용하여 정적분을 정의하고, 값을 구하는 방법을 사용함.
             </section>
-            <img id="img2" src="../assets/img2.jpg">
-            <section class="explain1">
+            <img id="img2" src="../assets/img2.jpg" title="출처 : 개념원리 미적분">
+            <sup class="link_in_wrapper">
+                <a class="link" href="#footer_item1">[1]</a>
+            </sup>
+            <section class="normal_text">
                 1. 적분 구간을 n등분한다. <br>
                 2. n개의 직사각형의 넓이를 모두 합한다. <br>
                 3. n을 무한대로 보낸다.<br>
@@ -121,7 +134,10 @@
                 \begin{align*} 
                 & \int_{a}^{b} f(x) dx = 
                 \lim_{n \to \infty} \sum_{k =1}^{n} 
-                {f(a + k \cdot \frac {b-a} {n}) \cdot \frac {b-a} {n}} \\ 
+                {f(a + k \cdot \frac {b-a} {n}) \cdot \frac {b-a} {n}} \\ \\
+                & \pi = \int_{0}^{1} f(x) dx = 
+                \lim_{n \to \infty} \sum_{k =1}^{n} 
+                {f(0 + k \cdot \frac {1} {n}) \cdot \frac {1} {n}}
                 \end{align*} 
                 $$
             </div>
@@ -130,8 +146,8 @@
         <section class="way">
             <h1>Way3</h1> <br> <br>
             <h2>3번째 방법 : 삼각함수와 테일러 급수를 활용하여 계산</h2> <br>
-            <section class="explain1">
-                <section class="explain2">
+            <section>
+                <section>
                     3번째 방법은 다른 사람의 
                     <span class="span_link">영상을</span>
                     <sup class="link_wrapper">
@@ -151,8 +167,8 @@
                 $$
             </div>
 
-            <section class="explain1">
-                <section class="explain2">
+            <section>
+                <section class="normal_text">
                     위 식에서 저런 결과가 나왔지만 실제로 삼각함수의 값을 구하기에는 
                     어려움이 있음. <br>
                     따라서 <span class="span_link">매클로린 급수
@@ -172,27 +188,20 @@
 
     <footer>
         <ul class="footer_lists">
-            <li id="footer_item1" class="footer_item"> 
-                [1] 출처 : https://youtu.be/2WtouEmlLyY?si=a8AI84AKxM9ESC0Q 
+            <li id="footer_item1" class="footer_item">
+                    <a class="link_in" href="#img2">[1]</a> 
+                    출처 : <a class="link_out" href="./page/page1/page1.html" target="_blank">
+                        개념원리 미적분
+                    </a>
+                </a>
             </li>
-
             <li id="footer_item2" class="footer_item">
-                <section class="explain1">
-                    <section class="explain2">
-                        [2] <br>
-                        무한번 미분 가능한 함수 $$f(x)$$에 대하여 <br>
-                        $$f(x) =  f(a) + (x-a)f^{\prime}(a) + 
-                        \frac{(x-a)^2} {2!}f^{\prime \prime}(a)
-                        + \frac{(x-a)^3} {3!}f^{\prime \prime \prime}(a)
-                        + \cdots$$ 이다. <br> <br>
-                        증명 : 
-                        <a class="link" href="https://ko.wikipedia.org/wiki/%ED%85%8C%EC%9D%BC%EB%9F%AC_%EA%B8%89%EC%88%98#%EC%A6%9D%EB%AA%85" 
-                        target="_blank" rel="noopener noreferrer">
-                            https://ko.wikipedia.org/wiki/%ED%85%8C%EC%9D%BC%EB%9F%AC_%EA%B8%89%EC%88%98#%EC%A6%9D%EB%AA%85
-                        </a>
-                    </section>
-                </section>
-            </li>
+                <a class="link_in" href="#img2">[1]</a> 
+                출처 : <a class="link_out" href="./page/page1/page1.html" target="_blank">
+                    개념원리 미적분
+                </a>
+            </a>
+        </li>
         </ul>
     </footer>
     <script src="script.js"></script>
