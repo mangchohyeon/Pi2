@@ -1,3 +1,8 @@
+html
+{
+  font-size: 100%;
+}
+
 body
 {
   width : 100vw;
@@ -6,7 +11,7 @@ body
   display : flex;
   flex-direction: column;
   font-family: sans-serif;
-  font-size: 1.0em;
+  font-size: 1.0rem;
 }
 
 /* 기본적으로 인라인 수식은 inline-block 유지 */
@@ -36,7 +41,7 @@ header h1
   width : 100%;
   height : auto;
   display: block;
-  padding-left: 40%;
+  padding-left : 40%;
   padding-right : 40%;
 }
 
@@ -104,6 +109,7 @@ main
   width : 100%;
   height : auto;
   display : inline-block;
+  font-size : 1.5em;
 }
 
 .img
@@ -122,24 +128,24 @@ main
   width : 40%;
 }
 
-.link_in_wrapper 
+.span_link
 {
-  position: absolute; /* 절대 위치를 사용하여 img 요소의 오른쪽 위에 배치 */
-  top: 0;
-  right: 0;
+  display : inline;
 }
 
-.link_in
+.link_wrapper
 {
-  color:aqua;
-  text-decoration-line:none;
+  display : inline-block;
+  width : 2vw;
+  height : 4vh;
 }
+
 
 .normal_text
 {
   width : auto;
   height : auto;
-  font-size : 1.5em;
+  font-size : 1.6em; 
 }
 
 
@@ -174,36 +180,77 @@ footer
   display : flex;
   flex-direction: column;
   vertical-align: middle;
-  padding : 1%;
 }
 
 .footer_lists
 {
   list-style: none;
-  display : flex;
-  flex-direction: column;
-  justify-content: left;
+  display : block;
+  width : 100%;
+  height : auto;
 }
 
 
-.footer_item {
-  font-size : 1.4em;
-}
-
-#footer_item2
+.footer_item 
 {
-  font-size: 1em !important;
+  font-size: 1.2em;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10%;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  
 }
 
-
-.link_out
+.link_source
 {
   text-decoration-line: none;
   color : lawngreen;
-
+  font-size: inherit;
+  display : inline-block;
+  width : auto;
+  height : auto;
 }
 
-.link_out:hover
+.link_source:visited
 {
-  text-decoration:underline;
+  text-decoration-line: none;
+  color : lawngreen;
+}
+
+.link_source:hover
+{
+  text-decoration-line: underline !important;
+  color : lawngreen;
+}
+
+.link_in
+{
+  color: #64DB99;
+  text-decoration-line: none;
+  font-size: 1.2em;
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+.link_in:hover
+{
+  color : #64DB99;
+  text-decoration-line: underline !important;
+}
+
+.link_in:visited
+{
+  color : #64DB99;
+  text-decoration-line: none;
+}
+
+#temp1
+{
+  display : inline-block !important;
+  width : 100% !important;
+  height : auto !important;
+  font-size : 1.3em !important;
 }
