@@ -258,3 +258,8 @@ footer
 #footer_item2 {
   align-items: left;
 }
+
+#footer_item2 {
+  width : 20%;
+  height : auto;
+}
