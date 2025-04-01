@@ -265,3 +265,8 @@ footer
   height : auto;
   display : block  !important;
 }
+
+#link_in2 {
+  display : block  !important;
+  width : 100%;
+}
