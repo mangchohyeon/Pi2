@@ -194,8 +194,8 @@ footer
 .footer_item 
 {
   font-size: 1.2em;
-  display: block;
-  width: 100%;
+  display: block !important;
+  width: 100% !important;
   height: auto;
   margin-bottom: 10%;
   border-bottom: 1px solid black;
@@ -257,9 +257,11 @@ footer
 
 #footer_item2 {
   align-items: left;
+  width : 100%  !important;
 }
 
 #footer_item2 {
   width : 20%;
   height : auto;
+  display : block  !important;
 }
