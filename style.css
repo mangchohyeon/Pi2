@@ -267,6 +267,6 @@ footer
 }
 
 #link_source2 {
-  display : block  !important;
+  display : inline-block  !important;
   width : 100%;
 }
