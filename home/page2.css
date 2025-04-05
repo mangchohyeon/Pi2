@@ -20,8 +20,6 @@ body {
   width : 90%;
   max-width: 94%;
   min-width: 88%;
-  border: 1px solid black;
-  border-collapse: collapse;
   table-layout: fixed;
 }
 
@@ -31,21 +29,21 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
 }
 
 .Tr {
   width : 100%;
   max-width: 100%;
   min-width: 98%;
-  border : 1px solid black;
 }
 
 .Data {
   font-size: 1.2rem;
-  border : 1px solid black;
   text-align: center;
   width : 33.3333%;
 }
 
-
+.PiTable, .Th, .Data {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
