@@ -270,3 +270,33 @@ footer
   display : inline  !important;
   width : 100%;
 }
+
+.appendix {
+  display : flexbox;
+  align-items: center;
+  justify-content: center;
+  width : 100%;
+}
+
+#Link_last {
+  display : flexbox !important;
+  align-items: center;
+  justify-content: center;
+  max-width : 100%;
+  width : auto;
+  text-align: center;
+  font-size: 2.0rem;
+  text-decoration: none;
+  color: black;
+}
+
+#Link_last :hover, :visited, :link, :active {
+  text-decoration: none;
+  display : flexbox !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.0rem;
+  max-width: 100%;
+  width : auto;
+  color: black;
+}
