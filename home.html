@@ -4,15 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width initial-scale=1.0" />
     <title>&#960;값 구하는 과정</title>
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"/>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
-    <!-- 자동 렌더링 기능을 사용하려면 auto-render 플러그인도 포함 -->
-    <script
-        defer
-        src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
-    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js" integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -33,7 +32,7 @@
         <section class="way">
             <h1 class="way_title">Way1</h1>
             <h2>첫번째 방법 : 기하학적인 개념 및 무한의 개념을 이용한 계산 </h2> <br>
-            <img src="assets/img1.jpeg" class="img" />
+            <img src="assets/img1.svg" class="img" />
             <div class="normal_text">
                 다음과 같이 반지름이 1인 원에 내접하는 n각형이 있다고 가정하겠습니다.
             </div> 
@@ -118,7 +117,7 @@
               따라서 급수를 이용하여 정적분을 정의하고, 값을 구하는 방법을 사용함.
           </section>
           <a href="#footer_item1">
-            <img id="img2" src="assets/img2.jpg" title="출처 : 개념원리 미적분">
+            <img id="img2" src="assets/img2.svg" title="출처 : 개념원리 미적분">
           </a>
 
           <section class="normal_text">
@@ -192,10 +191,12 @@
                 이 때 1을 대입하게 되면 <br>
                 \(\tan^{-1}(1) = 1 - \frac {1} {3} + \frac {1} {5} - \frac {1} {7} \cdots \, \cdots \)입니다.
               </div>
-              
+            
             </section>
-            
-            
+        </section>
+
+        <section class="appendix">
+            <a class="link_source" href="home/파이값 비교.html">실제 계산 값</a>
         </section>
     </main>
 
@@ -204,7 +205,7 @@
         <ul class="footer_lists">
           <li id="footer_item1" class="footer_item">
                   <a class="link_in" href="#img2">[1]</a> 
-                  출처 : <a class="link_source" href="./page/page1/page1.html" target="_blank">
+                  출처 : <a class="link_source" href="home/개념원리 미적분.html" target="_blank">
                       개념원리 미적분
                   </a>
               </a>
