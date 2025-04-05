@@ -290,7 +290,7 @@ footer
   color: black;
 }
 
-#Link_last :hover, :visited, :link, :active {
+#Link_last :hover, #Link_last :visited, #Link_last :link, #Link_last :active {
   text-decoration: none;
   display : flexbox !important;
   align-items: center;
